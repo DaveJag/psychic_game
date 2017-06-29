@@ -16,7 +16,7 @@
   <p>Losses: <span id="lossesId"></span></p>
   <p>Guesses Left: <span id="guessesLeftId"></span></p>
   <p>Your Guesses so far: <span id="yourGuessesId"></span></p>
-  <p id="status"> </p>; 
+  <p id="status">Select a letter. </p> 
   <p id="winloseId"> </p> 
    <div id="inputId">
      <input type="text" maxlength="9" size="6" id="guessId" onkeyup="getKeyChars()" autofocus>
@@ -24,7 +24,7 @@
  
  <script>
  
-    // Initialize Score Variables
+    // Initialize Game Variables
     var maxWins = 3;    //game ends after this many wins or losses.
     var maxLosses = 3;
     var maxGuess = 9;  //number of guesses allowed per round.
@@ -36,13 +36,16 @@
     var ranLetter = " "; //stores the random letter generated.
     var guessedLetters = []; //an array formed by guessed letters.
 
-//Prompt user for input
- //window.initGame();
- //window.getRandom();
- //window.getKeyChars();
- //window.compareChars();
- //window.checkForWinner();
- //window.newRound(); 
+
+//Generate random letter 
+ window.getRandom();
+//Collect and compare user input 
+ window.getKeyChars();
+ window.compareChars();
+ //Check statistics for winning/losing condition
+ window.checkForWinner();
+ //Reset variables for new round
+ window.newRound(); 
  </script>
 
 </body>
