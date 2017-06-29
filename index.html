@@ -1,1 +1,44 @@
+<!-- HW03 - David Jagodowski -->
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Psychic Game</title>
+	<link rel="stylesheet" type="text/css" href="assets/css/reset.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+    <script type="text/javascript" src="assets/javascript/javascript.js"></script>
+</head>
+<body onload="getRandom()"> <!-- Initiates random letter generator -->
+
+  <h1 id="heading1Id">The Psychic Game </h1>
+  <p id="instruct1Id">Guess what letter I'm thinking of: </p>
+  <p>Wins: <span id="winsId"> </span></p>
+  <p>Losses: <span id="lossesId"></span></p>
+  <p>Guesses Left: <span id="guessesLeftId"></span></p>
+  <p>Your Guesses so far: <span id="yourGuessesId"></span></p>
+  <p id="status"> </p>; 
  
+   <div id="inputId">
+     <input type="text" maxlength="9" size="6" id="guessId" height="60px" onkeyup="getKeyChars()" autofocus>
+   </div>
+ <script>
+ 
+// Initialize Score Variables
+  var wins = document.getElementById("winsId").innerHTML = 0;
+  var losses = document.getElementById("lossesId").innerHTML = 0;
+  var guessesLeft = document.getElementById("guessesLeftId").innerHTML = 9;
+  var guessesSoFar = document.getElementById("yourGuessesId").innerHTML = " ";
+  
+  var maxWins = 3;    //game ends after this many wins or losses.
+  var maxLosses = 3;
+  var maxGuess = 9;  //number of guesses allowed per round.
+
+  var ranLetter = " "; //stores the random letter generated.
+  var guessedLetters = " "; //the string formed by guessed letters.
+
+//Prompt user for input
+  window.getKeyChars();
+  window.compareChars();
+
+ </script>
+</body>
+</html> 
